@@ -11,14 +11,14 @@
 int func1(unsigned word)
 {
 	int ret = (int)((word << 24) >> 24);
-	show_bytes((byte_pointer)ret, sizeof(int));
+	show_bytes((byte_pointer)&ret, sizeof(int));
 	return ret;
 }
 
 int func2(unsigned word)
 {
 	int ret = ((int)word << 24) >> 24;
-	show_bytes((byte_pointer)ret, sizeof(int));
+	show_bytes((byte_pointer)&ret, sizeof(int));
 	return ret;
 }
 
