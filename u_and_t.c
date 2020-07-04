@@ -6,6 +6,7 @@
  ************************************************************************/
 
 #include<stdio.h>
+#include<string.h>
 
 float sum_elements(float a[], unsigned length)
 {
@@ -20,13 +21,24 @@ float sum_elements(float a[], unsigned length)
 	return result;
 }
 
+int str_longer(char *s, char *t)
+{
+	return strlen(s) - strlen(t) > 0;
+}
+
 int main(int argc, char *args[])
 {
-
+	/*
 	float a[3] = {1, 2, 3};
 	int len = 0;
 	
 	sum_elements(a, len);
+	*/
+
+	printf("%d\n", str_longer("abc", "ab"));
+	printf("%d\n", str_longer("abc", "abc"));
+	printf("%d\n", str_longer("abc", "abcd"));
+
 
     return 0;
 }
