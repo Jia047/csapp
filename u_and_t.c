@@ -23,7 +23,8 @@ float sum_elements(float a[], unsigned length)
 
 int str_longer(char *s, char *t)
 {
-	return strlen(s) - strlen(t) > 0;
+	// return strlen(s) - strlen(t) > 0;
+	return strlen(s) > strlen(t);
 }
 
 int main(int argc, char *args[])
