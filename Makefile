@@ -6,7 +6,7 @@ ifeq ("$(wildcard $(OUT))", "")
 $(shell mkdir -p $(OUT))
 endif
 
-all: u_and_t bit_expand tadd
+all: u_and_t bit_expand tadd tmult_ok
 
 u_and_t: u_and_t.c
 	$(CC) u_and_t.c -o $(OUT)u_and_t
@@ -19,6 +19,9 @@ helper.o:
 
 tadd: tadd.c
 	$(CC) tadd.c -o $(OUT)tadd
+
+tmult_ok: tmult_ok_2_36.c
+	$(CC) tmult_ok_2_36.c -o $(OUT)tmult_ok
 
 clean:
 	rm -rf $(OUT) *.o *.i
